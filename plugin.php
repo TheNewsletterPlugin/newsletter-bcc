@@ -51,6 +51,7 @@ class NewsletterBcc extends NewsletterAddon {
     public function filter_newsletter_message($message) {
         // Email headers case does not matter: Bcc or BCC or bcc.
         $message->headers['Bcc'] = $this->options['bcc'];
+        return $message;
     }
 }
 
